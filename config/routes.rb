@@ -1,5 +1,9 @@
 Rails.application.routes.draw do  
+<<<<<<< HEAD
   devise_for :users, controllers: { registrations: 'registrations', sessions: 'sessions' }
+=======
+  get 'welcome/home'
+>>>>>>> 5995af227efa2b48d49e520eddf15ae773599f01
   get '/app', to: 'homepage#index', as: 'app'
 
   namespace :api do
