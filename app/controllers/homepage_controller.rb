@@ -1,4 +1,6 @@
 class HomepageController < ApplicationController
-  def index
-  end
+	before_action :authenticate_user!, only: [:app]  
+	
+	def index
+	end
 end

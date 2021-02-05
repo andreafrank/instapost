@@ -5,6 +5,7 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 
+/client/node_modules
 public/uploads
 
 # Ignore bundler config.

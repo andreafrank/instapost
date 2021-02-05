@@ -1,29 +1,18 @@
-<<<<<<< HEAD
-# README
+# instapost readme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Work in progress to re-create Etsy with React and Rails.   
 
-Things you may want to cover:
+Immediate next steps: 
+- [ ] Work through post.user associations problem. See stackoverflow question [here.](https://stackoverflow.com/questions/66019588/rails-post-controller-not-passing-user-association-to-react-view) Note known bug.
+- [ ] Entirely revamp styling to match Etsy. Currently, just stock pasted together from other projects.
+- [ ] Create post upload form
+- [ ] Activate ActiveStorage so users may upload photos of images
+- [ ] Add additional associations not yet present
+- [ ] Write tests
+- [ ] Heroku or some other host
 
-* Ruby version
+:partying_face::nerd_face:
 
-* System dependencies
+Rails 6.0.3.4
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-=======
-# instapost
-tbd

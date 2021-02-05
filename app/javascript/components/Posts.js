@@ -21,9 +21,10 @@ class Posts extends React.Component {
       .then(response => this.setState({ posts: response }))
       .catch(() => this.props.history.push("/"));
   }
-  
-  render() {
+
+  renderPosts = () => {
     const { posts } = this.state;
+
     const allPosts = posts.map((post, index) => (
       <div key={index} className="col-md-6 col-lg-4">
         <div className="card mb-4">
@@ -41,16 +42,27 @@ class Posts extends React.Component {
         </div>
       </div>
     ));
+
     const noPost = (
       <div className="vw-100 vh-50 d-flex align-items-center justify-content-center">
         <h4>
           No posts yet. Why not <Link to="/new_post">create one</Link>
         </h4>
       </div>
-    );
+    )
 
+    // const renderAllPosts = {posts.length > 0 ? allPosts : noPost}
+
+    return <div className="row">{posts.length > 0 ? allPosts : noPost}</div>
+  }
+
+  
+  render() {
     return (
-      <>
+      <div>
+        <div>
+          {this.renderPosts()}
+        </div>
         <section className="jumbotron jumbotron-fluid text-center">
           <div className="container py-5">
             <h1 className="display-4">This will be an Etsy clone</h1>
@@ -66,15 +78,12 @@ class Posts extends React.Component {
                 Create New Post
               </Link>
             </div>
-            <div className="row">
-              {posts.length > 0 ? allPosts : noPost}
-            </div>
             <Link to="/" className="btn btn-link">
               Home
             </Link>
           </main>
         </div>
-      </>
+      </div>
     );
   }
 }

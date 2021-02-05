@@ -61,7 +61,7 @@ class Post extends React.Component {
   }
 
   render() {
-    const { post } = this.state;
+    const { post, user } = this.state;
     let descriptionList = "No descriptions present";
 
     if (post.description.length > 0) {
@@ -92,11 +92,12 @@ class Post extends React.Component {
                 {descriptionList}
                 <div>{post.title}</div>
                  <div>${(post.price * .01).toLocaleString()}</div>
+                  <div>{post.user}</div>
               </ul>
             </div>
             <div className="col-sm-12 col-lg-2">
               <button type="button" className="btn btn-danger" onClick={this.deletePost}>
-                Delete Recipe
+                Delete Post
               </button>
             </div>
           </div>

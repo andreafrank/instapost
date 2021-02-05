@@ -1,7 +1,13 @@
 class Api::V1::PostsController < ApplicationController
+
   def index
-  	post = Post.all.order(created_at: :desc)
-    render json: post
+     post = Post.all.order(created_at: :desc)
+
+    if user_signed_in? 
+      render json: post
+    else
+      render json: {}, status: 401
+    end
   end
 
   def create
@@ -15,8 +21,9 @@ class Api::V1::PostsController < ApplicationController
   end
 
   def show
-  	if post
-      render json: post
+    if post
+      # render json: post, include: :user
+      Post.as_json(methods: [:user_email])
     else
       render json: post.errors
     end
@@ -29,10 +36,10 @@ class Api::V1::PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :description, :price, :image)
+    params.require(:post).permit(:title, :description, :price, :user_id)
   end
 
-   def post
+  def post
      @post ||= Post.find(params[:id])
   end
 end
