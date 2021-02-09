@@ -1,6 +1,6 @@
 # instapost readme
 
-Work in progress to re-create Etsy with React and Rails.   
+Work in progress to re-create Etsy with React and Rails with PostGres.   
 
 Immediate next steps: 
 - [ ] Work through post.user associations problem. See stackoverflow question [here.](https://stackoverflow.com/questions/66019588/rails-post-controller-not-passing-user-association-to-react-view) Note known bug.
