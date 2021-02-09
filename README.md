@@ -9,7 +9,7 @@ Immediate next steps:
 - [ ] Activate ActiveStorage so users may upload photos of images
 - [ ] Add additional associations not yet present
 - [ ] Write tests
-- [ ] Heroku or some other host
+- [ ] Heroku, Netlify, or some other host
 
 :partying_face::nerd_face:
 
